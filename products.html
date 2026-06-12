@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop – lilleluneatelier</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html">lilleluneatelier</a>
+  <nav class="nav">
+    <a class="active" href="products.html">Shop</a>
+    <a href="about.html">Über uns</a>
+    <a href="contact.html">Kontakt</a>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>Shop</h1>
+  <form id="filters" class="filters">
+    <select name="category">
+      <option value="">Kategorie</option>
+      <option>Oberteile</option>
+      <option>Kleider</option>
+      <option>Hosen</option>
+      <option>Accessoires</option>
+    </select>
+    <select name="color">
+      <option value="">Farbe</option>
+      <option>schwarz</option>
+      <option>weiß</option>
+      <option>beige</option>
+      <option>blau</option>
+      <option>rot</option>
+    </select>
+    <select name="size">
+      <option value="">Größe</option>
+      <option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option>
+    </select>
+    <input type="search" name="q" placeholder="Suche…">
+  </form>
+
+  <div id="product-list" class="grid products-grid"></div>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> lilleluneatelier</p>
+  <nav><a href="legal.html">Impressum & Rechtliches</a></nav>
+</footer>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
