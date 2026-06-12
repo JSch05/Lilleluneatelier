@@ -64,6 +64,13 @@ img{max-width:100%; display:block; border-radius:8px}
 
 /* Falls das Bild viel Weißraum hat, halte den Header kompakt */
 .site-header{padding:10px 16px}
+.hero-image{
+  min-height:320px; border-radius:16px;
+  background:
+    linear-gradient(0deg, rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
+    url('../img/hero.jpg') center/cover no-repeat;
+}
+
 
 /* Optional: Wortmarke ausblenden, wenn Bild vorhanden */
 .brand-text{display:none}
