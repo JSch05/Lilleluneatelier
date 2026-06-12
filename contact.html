@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt – lilleluneatelier</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html">lilleluneatelier</a>
+  <nav class="nav">
+    <a href="products.html">Shop</a>
+    <a href="about.html">Über uns</a>
+    <a class="active" href="contact.html">Kontakt</a>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>Kontakt</h1>
+  <p>Fragen zu Größen, Farben oder Sonderwünschen? Schreib uns!</p>
+  <form id="contact-form" class="contact-form">
+    <label>Dein Name
+      <input type="text" name="name" required>
+    </label>
+    <label>E‑Mail
+      <input type="email" name="email" required>
+    </label>
+    <label>Nachricht
+      <textarea name="message" rows="6" required></textarea>
+    </label>
+    <button class="btn btn-primary" type="submit">Absenden</button>
+    <p id="form-msg" class="form-msg" aria-live="polite"></p>
+  </form>
+  <p class="hint">Demo: Das Formular sendet eine E‑Mail via mailto:. Für produktive Nutzung besser Formspree, Netlify Forms o. Ä. verwenden.</p>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> lilleluneatelier</p>
+  <nav><a href="legal.html">Impressum & Rechtliches</a></nav>
+</footer>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
