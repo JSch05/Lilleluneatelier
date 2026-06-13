@@ -187,5 +187,20 @@ function renderGrid(listEl, items){
   });
 })();
 
+// Mobile-Navigation toggeln
+(function mobileNav(){
+  const btn = document.querySelector('.nav-toggle');
+  const menu = document.getElementById('mobile-nav');
+  if(!btn || !menu) return;
+  btn.addEventListener('click', ()=>{
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    menu.hidden = open; // verstecken/anzeigen
+    // optional: Button-Symbol ändern
+    btn.textContent = open ? '☰' : '✕';
+  });
+})();
+
+
 // Footer Jahr
 (function year(){ const y = qs('#year'); if(y) y.textContent = new Date().getFullYear(); })();
