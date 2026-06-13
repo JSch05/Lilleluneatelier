@@ -29,7 +29,7 @@
       <h1 id="prod-name">Produktname</h1>
       <p id="prod-price" class="price"></p>
       <p id="prod-desc"></p>
-
+<!--
       <div class="options">
         <label>Farbe
           <select id="opt-color"></select>
@@ -38,6 +38,17 @@
           <select id="opt-size"></select>
         </label>
       </div>
+      -->
+       <div class="options">
+  <div>
+    <label>Farbe</label>
+    <div id="swatches" class="swatches" role="radiogroup" aria-label="Farbauswahl"></div>
+  </div>
+  <div>
+    <label>Größe</label>
+    <div id="sizes" class="swatches" role="radiogroup" aria-label="Größenauswahl"></div>
+  </div>
+</div>
 
       <div class="actions">
         <a id="buy-btn" class="btn btn-primary" href="#">Anfrage senden</a>
@@ -46,6 +57,7 @@
       <p class="note">Handgemacht auf Bestellung – Lieferzeit 5–10 Werktage.</p>
     </div>
   </div>
+      
 </main>
 
 <footer class="site-footer">
