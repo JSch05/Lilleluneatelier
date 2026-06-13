@@ -20,7 +20,7 @@
 }
 
 .brand{display:flex; align-items:center; gap:10px}
-.brand-logo{height:50px; width:auto} /* 28px standard*/
+.brand-logo{height:90px; width:auto} /* 28px standard*/
 .brand-text{font-weight:700; font-size:18px; letter-spacing:.5px; color:var(--text)}
 .brand-text{ display:none; }
 
