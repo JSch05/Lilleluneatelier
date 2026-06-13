@@ -108,6 +108,12 @@ img{max-width:100%; display:block; border-radius:8px}
 @media (min-width:768px){
   .brand-logo{ height:34px; max-width:220px; }
 }
+
+.swatches{display:flex; gap:8px; flex-wrap:wrap; margin:8px 0}
+.swatch{width:32px; height:32px; border-radius:50%; border:1px solid var(--border); cursor:pointer}
+.swatch.is-active{outline:2px solid var(--brand); outline-offset:2px}
+
+
 /*
  AB HIER TEST
 /* Falls das Bild viel Weißraum hat, halte den Header kompakt 
