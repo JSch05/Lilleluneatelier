@@ -1,10 +1,57 @@
 :root{
+
+  --bg:#FFFFFF;
+  --text:#3E4A59;        /* tiefes Blaugrau (Primary Text) */
+  --muted:#6b7280;       /* gedämpfter Text */
+  --brand:#3E4A59;       /* Buttons, Links */
+  --brand-acc:#6B4A2F;   /* warmer Braun-Akzent */
+  --surface:#F5F6F7;     /* Karten/Hintergründe hell */
+  --blue:#8FA2B7;        /* staubiges Blau für Sektionen */
+  --border:#e5e7eb;
+}
+
+/* Logo im Header */
+.brand{display:flex; align-items:center; gap:10px}
+.brand-logo{height:28px; width:auto}
+.brand-text{font-weight:700; font-size:18px; letter-spacing:.5px; color:var(--text)}
+
+/* Links/Buttons im Markengefühl */
+a{color:var(--brand)}
+a:hover{color:var(--brand-acc)}
+.btn{background:var(--brand); border-color:var(--brand); color:#fff}
+.btn:hover{background:var(--brand-acc); border-color:var(--brand-acc)}
+
+/* Hero mit Hintergrundfoto (Bild 3) plus Farb-Overlay */
+.hero-image{
+  min-height:320px; border-radius:16px;
+  background:
+    linear-gradient(0deg, rgba(255,255,255,0.55), rgba(255,255,255,0.55)),
+    url('../img/hero.jpg') center/cover no-repeat;
+}
+
+/* Weiche Sektionen in Blau */
+.usp{background:var(--surface); padding:32px; border-radius:16px}
+.highlights{background:linear-gradient(#fff, #f9fafb)}
+
+/* Karten dezenter */
+.card{background:#fff; border:1px solid var(--border)}
+
+/* Fokuszustände zugänglich */
+:focus-visible{outline:3px solid var(--brand-acc); outline-offset:2px}
+
+/* Farbswatches (später genutzt) */
+.swatches{display:flex; gap:8px; margin:8px 0}
+.swatch{width:28px; height:28px; border-radius:50%; border:1px solid var(--border); cursor:pointer}
+.swatch.is-active{outline:2px solid var(--brand)}
+
+ /* 
   --bg:#fff;
   --text:#1b1b1b;
   --muted:#6b6b6b;
-  --brand:#1e1b4b; /* tiefes Indigo */
-  --brand-acc:#bfa8ff; /* zartes Lavendel */
+  --brand:#1e1b4b; /* tiefes Indigo 
+  --brand-acc:#bfa8ff;  /* zartes Lavendel 
   --border:#eaeaea;
+*/
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
@@ -61,8 +108,9 @@ img{max-width:100%; display:block; border-radius:8px}
 @media (min-width:768px){
   .brand-logo{ height:34px; max-width:220px; }
 }
-
-/* Falls das Bild viel Weißraum hat, halte den Header kompakt */
+/*
+ AB HIER TEST
+/* Falls das Bild viel Weißraum hat, halte den Header kompakt 
 .site-header{padding:10px 16px}
 .hero-image{
   min-height:320px; border-radius:16px;
@@ -71,6 +119,7 @@ img{max-width:100%; display:block; border-radius:8px}
     url('../img/hero.jpg') center/cover no-repeat;
 }
 
+Test Ende */
 
 /* Optional: Wortmarke ausblenden, wenn Bild vorhanden */
 .brand-text{display:none}
