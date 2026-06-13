@@ -133,6 +133,50 @@ img{max-width:100%; display:block; border-radius:8px}
   }
 }
 
+/* Header-Layout */
+.site-header{
+  position: sticky; top:0; z-index:100;
+  display:grid; grid-template-columns:auto 1fr auto; align-items:center;
+  gap:12px; padding:10px 16px; background:#fff; border-bottom:1px solid var(--border);
+}
+
+/* Logo größer und sauber */
+.brand-logo{
+  height:40px; width:auto; display:block; object-fit:contain;
+}
+@media (min-width:768px){ .brand-logo{ height:48px; } }
+
+/* Desktop-Navigation rechts */
+.desktop-nav{ display:none; }
+.desktop-nav a{ margin-left:16px; }
+
+/* Burger-Button mobil */
+.nav-toggle{
+  justify-self:end;
+  appearance:none; border:1px solid var(--border); background:#fff;
+  padding:8px 10px; border-radius:8px; font-size:18px; line-height:1; cursor:pointer;
+}
+.nav-toggle:focus-visible{ outline:3px solid var(--brand-acc); outline-offset:2px; }
+
+/* Mobile-Menü: Vollbreite-Dropdown unter dem Header */
+.mobile-nav{
+  grid-column:1 / -1;
+  display:flex; flex-direction:column; gap:8px;
+  padding:10px 16px; margin:8px -16px -10px; /* an Kanten anschließen */
+  background:#fff; border-top:1px solid var(--border);
+}
+.mobile-nav a{ padding:10px 0; }
+
+/* Breakpoint: ab Tablet Desktop-Menü zeigen, Mobile ausblenden */
+@media (min-width:768px){
+  .nav-toggle{ display:none; }
+  .mobile-nav{ display:none !important; }
+  .desktop-nav{ display:flex; justify-self:end; }
+}
+
+/* Platz unter dem Header schaffen, damit Hero nicht klebt */
+.hero{ padding-top:16px; }
+
 
 
 /*
