@@ -105,11 +105,12 @@ function renderGrid(listEl, items){
 
 // Product page: Details
 (function productPageInit(){
-  const id = params.get('id');
+  const id = new URLSearchParams(location.search).get('id');
   if(!id) return;
   const p = PRODUCTS.find(x=>x.id===id);
   if(!p){ location.href = 'products.html'; return; }
 
+  // Basis setzen
   document.title = `${p.name} – lilleluneatelier`;
   qs('#prod-name').textContent = p.name;
   qs('#prod-price').textContent = €(p.price);
@@ -119,29 +120,57 @@ function renderGrid(listEl, items){
   img.src = p.images[0] || 'assets/img/placeholder.jpg';
   img.alt = p.name;
 
+  // Thumbnails
   const thumbs = qs('#thumbs');
   thumbs.innerHTML = (p.images||[]).map(src=>`<img src="${src}" alt="${p.name}">`).join('');
   thumbs.addEventListener('click', e=>{
     if(e.target.tagName==='IMG'){ img.src = e.target.src; }
   });
 
-  const cSel = qs('#opt-color'); const sSel = qs('#opt-size');
-  cSel.innerHTML = p.colors.map(c=>`<option>${c}</option>`).join('');
-  sSel.innerHTML = p.sizes.map(s=>`<option>${s}</option>`).join('');
+  // Swatches einfügen (dein Code)
+  const sw = qs('#swatches'); const sz = qs('#sizes');
+  const selected = { color: p.colors[0], size: p.sizes[0] };
 
-  // Demo-"Kaufen": öffnet Mail mit Vorauswahl
+  function renderSwatches(values, target, type){
+    target.innerHTML = values.map(v=>`<button class="swatch" data-v="${v}" aria-pressed="false" title="${v}"></button>`).join('');
+    qsa('.swatch', target).forEach(el=>{
+      const v = el.dataset.v.toLowerCase();
+      const map = {
+        'braun':'#6B4A2F','braun-weiß':'linear-gradient(45deg,#6B4A2F 50%,#fff 50%)',
+        'beige':'#d6c2a6','blau':'#8FA2B7','weiß':'#ffffff','schwarz':'#111827'
+      };
+      const bg = map[v] || 'var(--border)';
+      if(bg.startsWith('linear')) el.style.background = bg; else el.style.backgroundColor = bg;
+    });
+    target.addEventListener('click', (e)=>{
+      const btn = e.target.closest('.swatch');
+      if(!btn) return;
+      qsa('.swatch', target).forEach(b=>{ b.classList.remove('is-active'); b.setAttribute('aria-pressed','false'); });
+      btn.classList.add('is-active');
+      btn.setAttribute('aria-pressed','true');
+      selected[type] = btn.dataset.v;
+      buy.setAttribute('href', mailto());
+    });
+  }
+
+  renderSwatches(p.colors, sw, 'color');
+  renderSwatches(p.sizes, sz, 'size');
+
+  // Anfrage-Link
   const buy = qs('#buy-btn');
-  const subject = encodeURIComponent(`Anfrage: ${p.name}`);
   function mailto(){
-    const color = encodeURIComponent(cSel.value||'');
-    const size = encodeURIComponent(sSel.value||'');
-    const body = encodeURIComponent(`Hallo lilleluneatelier,\nich interessiere mich für:\n\nProdukt: ${p.name}\nFarbe: ${cSel.value}\nGröße: ${sSel.value}\nPreis: ${€(p.price)}\n\nBitte um Rückmeldung.\n`);
+    const subject = encodeURIComponent(`Anfrage: ${p.name}`);
+    const body = encodeURIComponent(
+      `Hallo lilleluneatelier,\n`+
+      `ich interessiere mich für:\n\n`+
+      `Produkt: ${p.name}\nFarbe: ${selected.color}\nGröße: ${selected.size}\n`+
+      `Preis: ${€(p.price)}\n\nBitte um Rückmeldung.\n`
+    );
     return `mailto:info@lilleluneatelier.example?subject=${subject}&body=${body}`;
   }
   buy.setAttribute('href', mailto());
-  cSel.addEventListener('change', ()=> buy.setAttribute('href', mailto()));
-  sSel.addEventListener('change', ()=> buy.setAttribute('href', mailto()));
 })();
+
 
 // Contact: mailto senden
 (function contactInit(){
