@@ -11,9 +11,15 @@
 }
 
 /* Logo im Header */
+.site-header{ padding:12px 16px; }
+@media (min-width:768px){
+  .brand-logo{ height:34px; max-width:220px; }
+}
+
 .brand{display:flex; align-items:center; gap:10px}
 .brand-logo{height:50px; width:auto} /* 28px standard*/
 .brand-text{font-weight:700; font-size:18px; letter-spacing:.5px; color:var(--text)}
+.brand-text{ display:none; }
 
 /* Links/Buttons im Markengefühl */
 a{color:var(--brand)}
@@ -105,9 +111,7 @@ img{max-width:100%; display:block; border-radius:8px}
   object-fit:contain;
   display:block;
 }
-@media (min-width:768px){
-  .brand-logo{ height:34px; max-width:220px; }
-}
+
 
 .swatches{display:flex; gap:8px; flex-wrap:wrap; margin:8px 0}
 .swatch{width:32px; height:32px; border-radius:50%; border:1px solid var(--border); cursor:pointer}
