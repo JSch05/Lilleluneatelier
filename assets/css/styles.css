@@ -15,6 +15,9 @@
 @media (min-width:768px){
   .brand-logo{ height:34px; max-width:220px; }
 }
+@media (max-width:480px){
+  .brand-logo{ height:52px; }
+}
 
 .brand{display:flex; align-items:center; gap:10px}
 .brand-logo{height:50px; width:auto} /* 28px standard*/
@@ -102,15 +105,16 @@ img{max-width:100%; display:block; border-radius:8px}
 .site-footer{border-top:1px solid var(--border)}
 .form-msg{min-height:1.2em; color:var(--brand)}
 .hint{color:var(--muted); font-size:14px}
-/* Header-Logo robust begrenzen */
+/* Header-Logo robust begrenzen 
 .brand{display:flex; align-items:center; gap:10px; min-height:56px}
 .brand-logo{
-  height:28px;           /* feste Sicht-Höhe */
+  height:28px;           /* feste Sicht-Höhe 
   width:auto;
-  max-width:180px;       /* falls sehr breites Logo */
+  max-width:180px;       /* falls sehr breites Logo 
   object-fit:contain;
   display:block;
 }
+*/
 
 
 .swatches{display:flex; gap:8px; flex-wrap:wrap; margin:8px 0}
