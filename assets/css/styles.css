@@ -123,13 +123,13 @@ img{max-width:100%; display:block; border-radius:8px}
 
 /* Logo-Override — ganz unten platzieren */
 .site-header .brand img.brand-logo {
-  height: 56px !important;   /* gewünschte Höhe testen: 48–64 px */
+  height: 90px !important;   /* gewünschte Höhe testen: 48–64 px */
   width: auto !important;
   max-width: none !important;
 }
 @media (min-width: 768px) {
   .site-header .brand img.brand-logo {
-    height: 64px !important;
+    height: 99px !important;
   }
 }
 
