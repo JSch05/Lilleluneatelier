@@ -9,21 +9,6 @@ const PRODUCTS = [
     sizes: ["44","50","56","62","68","74","80","86","92","98","104","110","116","122"],
     images: ["assets/img/lasse-1.jpg","assets/img/lasse-2.jpg"],
     desc: "Bequeme Mitwachshose mit weichen Bündchen an Bauch & Beinen. Auf Wunsch in weiteren Stoffen erhältlich."
-  }
-  // weitere Demo-Produkte kannst du hier später ergänzen
-];
-
-
-const PRODUCTS = [
-  {
-    id: "lasse-hose",
-    name: "Mitwachshose »Lasse«",
-    category: "Hosen",
-    price: 34.00,
-    colors: ["braun-weiß","blau","beige"],   // passe an, was du anbietest
-    sizes: ["44","50","56","62","68","74","80","86","92","98","104","110","116","122"],
-    images: ["assets/img/lasse-1.jpg","assets/img/lasse-2.jpg"],
-    desc: "Bequeme Mitwachshose mit weichen Bündchen an Bauch & Beinen. Auf Wunsch in weiteren Stoffen erhältlich."
   },
   {
     id: "linen-shirt",
