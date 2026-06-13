@@ -11,16 +11,27 @@
 </head>
 <body>
 <header class="site-header">
-  <a class="brand" href="index.html">
-    <img class="brand-logo" src="assets/img/logo.png" alt="lilleluneatelier Logo">
-    <span class="brand-text">lilleluneatelier</span>
+  <a class="brand" href="index.html" aria-label="Startseite">
+    <img class="brand-logo" src="assets/img/logo.png" alt="Lille Lune Atelier">
   </a>
-  <nav class="nav">
+
+  <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Menü öffnen">
+    ☰
+  </button>
+
+  <nav class="nav desktop-nav">
+    <a href="products.html">Shop</a>
+    <a href="about.html">Über uns</a>
+    <a href="contact.html">Kontakt</a>
+  </nav>
+
+  <nav id="mobile-nav" class="nav mobile-nav" hidden>
     <a href="products.html">Shop</a>
     <a href="about.html">Über uns</a>
     <a href="contact.html">Kontakt</a>
   </nav>
 </header>
+
 
 <main>
   <section class="hero">
