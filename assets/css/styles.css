@@ -12,7 +12,7 @@
 
 /* Logo im Header */
 .brand{display:flex; align-items:center; gap:10px}
-.brand-logo{height:28px; width:auto}
+.brand-logo{height:32px; width:auto}
 .brand-text{font-weight:700; font-size:18px; letter-spacing:.5px; color:var(--text)}
 
 /* Links/Buttons im Markengefühl */
