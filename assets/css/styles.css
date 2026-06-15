@@ -36,7 +36,7 @@ a:hover{color:var(--brand-acc)}
   min-height:320px; border-radius:16px;
   background:
     linear-gradient(0deg, rgba(255,255,255,0.55), rgba(255,255,255,0.55)),
-    url('../img/hero.png') center/cover no-repeat;
+    url('../img/hero.jpg') center/cover no-repeat;
 }
 
 /* Weiche Sektionen in Blau */
