@@ -1,0 +1,324 @@
+/* =========================================================
+DESIGN-SYSTEM / FARBPALETTE
+===========================
+
+Hier werden globale Farben definiert.
+Änderungen wirken sich auf die gesamte Website aus.
+========================================================= */
+
+:root{
+
+/* Haupt-Hintergrundfarbe */
+--bg:#FFFFFF;
+
+/* Standard-Schriftfarbe */
+--text:#3E4A59;
+
+/* Sekundäre Schriftfarbe */
+--muted:#6b7280;
+
+/* Hauptfarbe für Buttons und Links */
+--brand:#3E4A59;
+
+/* Akzentfarbe für Hover-Effekte */
+--brand-acc:#6B4A2F;
+
+/* Heller Hintergrund für Karten */
+--surface:#F5F6F7;
+
+/* Zusätzliche Akzentfarbe */
+--blue:#8FA2B7;
+
+/* Rahmenfarbe */
+--border:#e5e7eb;
+}
+
+/* =========================================================
+CSS RESET
+=========
+
+Vereinheitlicht die Darstellung in allen Browsern.
+========================================================= */
+
+*{
+box-sizing:border-box;
+}
+
+html,
+body{
+margin:0;
+padding:0;
+}
+
+/* =========================================================
+BODY / GRUNDEINSTELLUNGEN
+========================================================= */
+
+body{
+
+/* Hauptschrift */
+font-family:
+"Plus Jakarta Sans",
+system-ui,
+-apple-system,
+Segoe UI,
+Roboto,
+Arial,
+sans-serif;
+
+/* Schriftfarbe */
+color:var(--text);
+
+/* Hintergrund */
+background:var(--bg);
+
+/* Zeilenhöhe */
+line-height:1.6;
+}
+
+/* =========================================================
+LINKS
+========================================================= */
+
+a{
+
+/* Linkfarbe */
+color:var(--brand);
+
+/* Unterstreichung entfernen */
+text-decoration:none;
+}
+
+a:hover{
+
+/* Farbe beim Überfahren */
+color:var(--brand-acc);
+}
+
+/* =========================================================
+BILDER
+========================================================= */
+
+img{
+
+/* Nie breiter als der Container */
+max-width:100%;
+
+display:block;
+
+/* Leicht abgerundete Ecken */
+border-radius:8px;
+}
+
+/* =========================================================
+CONTAINER
+=========
+
+Begrenzt die maximale Breite der Inhalte.
+========================================================= */
+
+.container{
+
+max-width:1080px;
+
+margin:0 auto;
+
+padding:0 16px;
+}
+
+/* =========================================================
+HEADER
+========================================================= */
+
+.site-header{
+
+/* Header bleibt beim Scrollen sichtbar */
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+/* Grid-Layout:
+Logo | Freiraum | Navigation */
+display:grid;
+
+grid-template-columns:auto 1fr auto;
+
+align-items:center;
+
+gap:12px;
+
+padding:10px 16px;
+
+background:#fff;
+
+border-bottom:1px solid var(--border);
+}
+
+/* =========================================================
+LOGO
+========================================================= */
+
+.brand{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+}
+
+/* Logo-Grafik */
+.brand-logo{
+
+height:40px;
+
+width:auto;
+
+object-fit:contain;
+
+display:block;
+}
+
+/* Firmenname neben Logo */
+.brand-text{
+
+display:none;
+}
+
+/* Größeres Logo auf Desktop */
+@media (min-width:768px){
+
+.brand-logo{
+
+```
+height:48px;
+```
+
+}
+}
+
+/* =========================================================
+NAVIGATION
+========================================================= */
+
+/* Desktop-Menü */
+.desktop-nav{
+
+display:none;
+}
+
+.desktop-nav a{
+
+margin-left:16px;
+}
+
+/* Burger-Menü */
+.nav-toggle{
+
+justify-self:end;
+
+appearance:none;
+
+border:1px solid var(--border);
+
+background:#fff;
+
+padding:8px 10px;
+
+border-radius:8px;
+
+cursor:pointer;
+}
+
+/* Mobile Dropdown */
+.mobile-nav{
+
+grid-column:1 / -1;
+
+display:flex;
+
+flex-direction:column;
+
+gap:8px;
+
+padding:10px 16px;
+
+margin:8px -16px -10px;
+
+background:#fff;
+
+border-top:1px solid var(--border);
+}
+
+/* Desktopansicht */
+@media (min-width:768px){
+
+.nav-toggle{
+display:none;
+}
+
+.mobile-nav{
+display:none !important;
+}
+
+.desktop-nav{
+display:flex;
+justify-self:end;
+}
+}
+
+/* =========================================================
+HERO-BEREICH
+========================================================= */
+
+.hero{
+
+display:grid;
+
+grid-template-columns:1.1fr .9fr;
+
+gap:24px;
+
+padding:48px 16px;
+
+padding-top:16px;
+
+border-bottom:1px solid var(--border);
+}
+
+/* Hero-Titel */
+.hero-inner h1{
+
+font-size:40px;
+
+line-height:1.1;
+
+margin:0 0 12px;
+}
+
+/* Hero-Text */
+.hero-inner p{
+
+color:var(--muted);
+
+margin:0 0 16px;
+}
+
+/* Hero-Bild */
+.hero-image{
+
+min-height:320px;
+
+border-radius:16px;
+
+background:
+linear-gradient(
+0deg,
+rgba(255,255,255,0.55),
+rgba(255,255,255,0.55)
+),
+url('../img/hero.jpg')
+center/cover no-repeat;
+}
