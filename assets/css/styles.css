@@ -17,6 +17,7 @@ Hier werden globale Farben definiert.
 /* Sekundäre Schriftfarbe */
 --muted:#6b7280;
 
+  /*
   .btn{
     background: var(--brand);
     color: #fff;
@@ -26,14 +27,14 @@ Hier werden globale Farben definiert.
     background: var(--brand-acc);
     color: #fff;
 }
-
+*/
 /* 
-  Hauptfarbe für Buttons und Links 
+  Hauptfarbe für Buttons und Links*/ 
     --brand:#3E4A59;
 
-  /* Akzentfarbe für Hover-Effekte 
+  /* Akzentfarbe für Hover-Effekte */
     --brand-acc:#6B4A2F;
-*/
+
 
 /* Heller Hintergrund für Karten */
 --surface:#F5F6F7;
