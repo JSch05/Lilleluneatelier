@@ -28,12 +28,11 @@ Hier werden globale Farben definiert.
     color: #fff;
 }
 */
-/* 
-  Hauptfarbe für Buttons und Links*/ 
-    --brand:#3E4A59;
+/* Hauptfarbe für Buttons und Links*/ 
+--brand:#3E4A59;
 
   /* Akzentfarbe für Hover-Effekte */
-    --brand-acc:#6B4A2F;
+--brand-acc:#6B4A2F;
 
 
 /* Heller Hintergrund für Karten */
