@@ -18,6 +18,12 @@
   box-sizing:border-box;
 }
 
+h1,h2,h3{
+  font-family:
+    "Cormorant Garamond",
+    serif;
+}
+
 html,body{
   margin:0;
   padding:0;
@@ -104,6 +110,27 @@ img{max-width:100%; display:block; border-radius:8px}
 }
 .site-header,.site-footer{display:flex; align-items:center; justify-content:space-between; padding:16px}
 .site-header{border-bottom:1px solid var(--border); position:sticky; top:0; background:#fff; z-index:10}
+.site-footer{
+
+  text-align:center;
+
+  padding:60px 20px;
+
+  border-top:1px solid #cfc7be;
+
+  background:var(--bg);
+}
+
+.site-footer nav{
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:30px;
+
+  flex-wrap:wrap;
+}
 .brand{font-weight:700; font-size:20px; letter-spacing:.5px}
 .nav a{margin-left:16px}
 .nav a.active{font-weight:700}
@@ -113,6 +140,34 @@ img{max-width:100%; display:block; border-radius:8px}
 .btn{display:inline-block; padding:12px 18px; border:1px solid var(--brand); border-radius:999px; color:#fff; background:var(--brand)}
 .btn:hover{opacity:.9}
 .btn-primary{background:var(--brand); border-color:var(--brand)}
+.lookbook{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:8px;
+  margin:40px 0;
+}
+
+.lookbook img{
+  width:100%;
+  aspect-ratio:2/3;
+  object-fit:cover;
+}
+.usp{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:40px;
+
+  background:#f2ece5;
+
+  padding:60px;
+
+  margin:60px auto;
+}
+
+.usp-item{
+  text-align:center;
+  padding:20px;
+}
 .center{text-align:center; margin-top:16px}
 .grid{display:grid; gap:16px}
 /*.products-grid{
