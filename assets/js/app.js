@@ -187,6 +187,17 @@ function renderGrid(listEl, items){
   });
 })();
 
+const toggleButton = document.querySelector('.nav-toggle');
+const mobileNav = document.querySelector('#mobile-nav');
+
+if (toggleButton && mobileNav) {
+  toggleButton.addEventListener('click', () => {
+    const isOpen = toggleButton.getAttribute('aria-expanded') === 'true';
+    toggleButton.setAttribute('aria-expanded', String(!isOpen));
+    mobileNav.hidden = isOpen;
+  });
+}
+
 // Mobile-Navigation toggeln
 (function mobileNav(){
   const btn = document.querySelector('.nav-toggle');
