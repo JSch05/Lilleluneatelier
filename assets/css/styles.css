@@ -27,31 +27,55 @@ a{text-decoration:none;color:var(--brand)}
 a:hover{color:var(--brand-accent)}
 
 .container{
+
     max-width: 1200px;
 
     margin: 0 auto;
 
-    padding: 40px 20px;
+    padding: 0 20px;
 }
 /*.container{max-width:1200px;margin:auto;padding:0 16px} --> AlT*/
 
 /* HEADER */
 .site-header{
- position:sticky;top:0;z-index:100;
- display:flex;justify-content:space-between;align-items:center;
- padding:12px 20px;background:#fff;
- border-bottom:1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 15px 30px;
+
+    background: #fff;
+
+    border-bottom: 1px solid var(--border);
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,0.05);
 }
-.brand{display:flex;align-items:center}
-.brand-logo{height:70px;width:auto;object-fit:contain}
-.nav{display:flex;gap:20px}
-.nav a.active{font-weight:700}
 
 /* HERO */
 .hero{
- display:grid;grid-template-columns:1fr 1fr;
- gap:24px;padding:48px 0;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 40px;
+
+    padding: 60px 20px;
+
+    margin-bottom: 60px;
 }
+
 .hero-image{
  min-height:350px;border-radius:var(--radius);
  background:linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.4)),
@@ -84,7 +108,16 @@ a:hover{color:var(--brand-accent)}
 /* Produktkarten */
 .card,
 .product-card,
-.product,
+.product{
+
+    overflow: hidden;
+
+    background: white;
+
+    min-height: 100%;
+
+    margin-bottom: 20px;
+}
 .collection-card{
 
     background: #fff;
@@ -127,13 +160,14 @@ a:hover{color:var(--brand-accent)}
 .product img,
 .collection-card img{
 
-    width: 100%;
+   width: 100%;
 
-    height: 300px;
+   height: auto;
+   max-height: 350px;
 
-    object-fit: cover;
+   object-fit: cover;
 
-    border-radius: 12px;
+   border-radius: 12px;
 }
 
 
