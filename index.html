@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>lilleluneatelier – Handgemachte Mode</title>
+  <meta name="description" content="lilleluneatelier – liebevoll handgemachte Kleidung in kleinen Auflagen.">
+  <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
+  <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap)" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<header class="site-header">
+ 
+  <nav class="nav desktop-nav">
+    <a href="products.html">Shop</a>
+    <a href="about.html">Über uns</a>
+    <a href="contact.html">Kontakt</a>
+  </nav>
+
+  <nav id="mobile-nav" class="nav mobile-nav" hidden>
+    <a href="products.html">Shop</a>
+    <a href="about.html">Über uns</a>
+    <a href="contact.html">Kontakt</a>
+  </nav>
+  
+  <div class="logo-area">
+    <img
+      class="brand-logo"
+      src="assets/img/logo.png"
+      alt="Lille Lune Atelier">
+  </div>
+
+</header>
+
+
+<main>
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Handgemachte Mode – sanft, schlicht, zeitlos</h1>
+      <p>Nachhaltige Stoffe, kleine Auflagen, mit Liebe genäht.</p>
+      <a class="btn btn-primary" href="products.html">Jetzt entdecken</a>
+    </div>
+   <div class="hero-image" role="img" aria-label="Atelierstimmung">
+  <!-- Hintergrund per CSS aus assets/img/hero.jpg -->
+</div>
+<!-- Hintergrund erneuert-->
+  </section>
+
+  <section class="highlights container">
+    <h2>Neue Stücke</h2>
+    <div id="new-arrivals" class="grid products-grid">
+      <!-- JS rendert hier die neuesten 4 Produkte -->
+    </div>
+    <div class="center">
+      <a class="btn" href="products.html">Alle Produkte</a>
+    </div>
+  </section>
+
+  <section class="usp container">
+    <div class="usp-item">
+      <h3>Handarbeit</h3>
+      <p>Jedes Stück wird in unserem kleinen Atelier gefertigt.</p>
+    </div>
+    <div class="usp-item">
+      <h3>Nachhaltig</h3>
+      <p>Ausgewählte Stoffe, kurze Lieferketten, faire Preise.</p>
+    </div>
+    <div class="usp-item">
+      <h3>Kleine Auflagen</h3>
+      <p>Limitierte Mengen – so bleibt jedes Teil besonders.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> lilleluneatelier</p>
+  <nav>
+    <a href="legal.html">Impressum & Rechtliches</a>
+  </nav>
+</footer>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
